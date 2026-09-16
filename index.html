@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfólio profissional de Daniele Brito — Gerente de Projetos | PMO • Infraestrutura de TI • Óleo e Gás Offshore.">
+<title>Daniele Brito | Gerente de Projetos • PMO • TI</title>
+<style>
+:root{
+ --navy:#182d43;--navy2:#102236;--gold:#b88736;--gold2:#d6b26a;
+ --cream:#fbfaf7;--white:#fff;--text:#53616c;--line:#e8e3d9;
+ --soft:#f3f0e9;--green:#3d6b5d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(251,250,247,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 25px Georgia,serif;color:var(--navy)}
+.logo span{color:var(--gold);font-style:italic}
+.nav-links{display:flex;gap:22px;font-size:14px;font-weight:600;color:var(--navy)}
+.nav-links a:hover{color:var(--gold)}
+.menu-btn{display:none;border:0;background:var(--navy);color:#f4d99f;width:48px;height:48px;border-radius:10px;font-size:24px}
+
+.hero{padding:145px 0 85px;min-height:100vh;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}
+.eyebrow,.section-kicker{color:var(--gold);text-transform:uppercase;letter-spacing:4px;font-size:13px;font-weight:bold}
+.eyebrow{margin-bottom:18px}
+h1{color:var(--navy);font:700 clamp(54px,7vw,88px)/.98 Georgia,serif;letter-spacing:-3px;margin-bottom:25px}
+h1 span{color:var(--gold);font-style:italic;font-weight:normal}
+.hero-title{color:var(--gold);text-transform:uppercase;letter-spacing:2.5px;font-size:17px;font-weight:600;margin-bottom:30px}
+.hero h2,.section-title{font-family:Georgia,serif;color:var(--navy)}
+.hero h2{font-size:clamp(38px,4.3vw,59px);line-height:1.08;margin-bottom:25px}
+.hero h2 em{color:var(--gold);font-weight:normal}
+.hero p{font-size:19px;max-width:690px}
+.hero-photo img{width:100%;max-width:430px;display:block;margin:auto;border-radius:24px;box-shadow:0 18px 50px rgba(24,45,67,.12);border:7px solid white}
+.photo-caption{background:var(--navy);color:white;padding:14px 18px;border-radius:14px;max-width:400px;margin:-10px auto 0;position:relative;text-align:center;font-size:13px}
+
+section{padding:95px 0}
+.section-kicker{margin-bottom:12px}
+.section-title{font-size:clamp(38px,5vw,58px);line-height:1.1;margin-bottom:20px}
+.section-intro{max-width:790px;font-size:18px}
+
+.about{background:white}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+.about-card{background:var(--navy);color:white;padding:34px;border-radius:20px;box-shadow:0 18px 50px rgba(24,45,67,.1)}
+.about-card strong{display:block;color:#d8b56b;font:44px Georgia,serif}
+.about-card p{margin-bottom:20px}
+.about-text p{font-size:18px;margin-bottom:18px}
+
+.numbers{background:var(--navy);color:white}
+.numbers .section-kicker{color:var(--gold2)}
+.numbers .section-title{color:white}
+.metric-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:38px}
+.metric{border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:24px 18px;background:rgba(255,255,255,.04)}
+.metric strong{display:block;color:var(--gold2);font:700 34px Georgia,serif;line-height:1.1;margin-bottom:7px}
+.metric span{font-size:13px;color:#d8e0e6}
+
+.projects{background:white}
+.project-group{margin-top:48px}
+.group-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:18px}
+.group-head h3{font:700 30px Georgia,serif;color:var(--navy)}
+.group-head p{max-width:650px;font-size:15px}
+.grid{display:grid;gap:22px}
+.two{grid-template-columns:repeat(2,1fr)}
+.three{grid-template-columns:repeat(3,1fr)}
+.card{background:white;border:1px solid var(--line);border-radius:20px;padding:27px;box-shadow:0 8px 30px rgba(24,45,67,.05)}
+.project{position:relative;overflow:hidden}
+.project:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)}
+.project h3{color:var(--navy);margin:7px 0 9px;font-size:20px}
+.project p{font-size:15px}
+.tag,.period{color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:1.5px;font-weight:bold}
+.project ul{margin:15px 0 0 20px;font-size:14px}
+.status{display:inline-flex;align-items:center;gap:7px;margin-top:18px;padding:6px 10px;border-radius:999px;background:#f2f5f3;color:var(--green);font-size:12px;font-weight:700}
+.status:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:19px}
+.kpi{background:var(--soft);border-radius:12px;padding:12px}
+.kpi strong{display:block;color:var(--navy);font:700 22px Georgia,serif}
+.kpi span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#7a858d;margin-top:2px}
+.result{margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}
+.result strong{color:var(--navy)}
+
+.program-card{background:var(--navy);color:white;border:0;box-shadow:0 18px 50px rgba(24,45,67,.12)}
+.program-card:before{background:var(--gold2)}
+.program-card h3{color:white;font:700 28px Georgia,serif}
+.program-card p{color:#dbe3e9}
+.program-card .tag{color:var(--gold2)}
+.program-card .kpi{background:rgba(255,255,255,.08)}
+.program-card .kpi strong{color:var(--gold2)}
+.program-card .kpi span{color:#c7d0d7}
+.program-card .result{border-color:rgba(255,255,255,.15)}
+.program-card .result strong{color:white}
+
+.timeline .card{min-height:190px}
+.period{margin-bottom:8px}
+
+.competencies{background:#f4f1ea}
+.icon{color:var(--gold);font-size:27px;margin-bottom:12px}
+.card h3{color:var(--navy);margin-bottom:8px;font-size:18px}
+
+.cta{background:var(--navy);color:white;text-align:center}
+.cta .section-title{color:white}
+.cta p{max-width:720px;margin:0 auto 28px;font-size:18px}
+.buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:999px;font-weight:bold}
+.btn-primary{background:var(--gold);color:white}
+.btn-light{background:white;color:var(--navy)}
+.contact{background:white;text-align:center}
+.contact-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:15px;margin-top:32px}
+.contact-item{border:1px solid var(--line);border-radius:14px;padding:16px 22px;min-width:230px;color:var(--navy);font-weight:600}
+.contact-item:hover{border-color:var(--gold);color:var(--gold)}
+footer{background:#101f2f;color:#c8d0d7;text-align:center;padding:28px 15px;font-size:13px}
+footer strong{color:white}
+
+@media(max-width:950px){
+ .metric-grid{grid-template-columns:repeat(3,1fr)}
+ .nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:var(--cream);padding:20px 5%;flex-direction:column;border-bottom:1px solid var(--line)}
+ .nav-links.open{display:flex}.menu-btn{display:block}
+ .hero{padding-top:120px}.hero-grid,.about-grid{grid-template-columns:1fr;gap:45px}
+ .hero-photo{order:-1}.hero-photo img{max-width:340px}
+ .two,.three{grid-template-columns:1fr}
+ .group-head{display:block}
+}
+@media(max-width:600px){
+ .metric-grid{grid-template-columns:1fr 1fr}
+ .kpis{grid-template-columns:1fr 1fr}
+ .hero h2{font-size:40px}.hero p{font-size:17px}
+ .photo-caption{margin-top:12px}
+}
+@media(max-width:430px){
+ .metric-grid,.kpis{grid-template-columns:1fr}
+ h1{font-size:58px}
+}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+<a class="logo" href="#inicio">Daniele <span>Brito</span></a>
+<nav class="nav-links" id="navLinks">
+<a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#programa">Program Management</a><a href="#experiencia">Experiência</a><a href="#competencias">Competências</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
+</nav>
+<button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="container hero-grid"><div>
+<div class="eyebrow">Portfólio Profissional</div>
+<h1>Daniele <span>Brito</span></h1>
+<div class="hero-title">Gerente de Projetos · PMO · Infraestrutura de TI · Óleo e Gás Offshore</div>
+<h2>Transformo complexidade em clareza, estratégia em <em>execução.</em></h2>
+<p>Profissional de TI com mais de 15 anos de experiência, conectando projetos, infraestrutura, governança, fornecedores e operação em ambientes offshore e onshore.</p>
+<div class="buttons" style="justify-content:flex-start"><a class="btn btn-primary" href="#projetos">Conheça meus projetos</a><a class="btn" style="border:1px solid var(--navy);color:var(--navy)" href="#contato">Fale comigo</a></div>
+</div><div class="hero-photo"><img src="foto-daniele.jpeg" alt="Daniele Brito — retrato profissional"><div class="photo-caption">Project Management • PMO • Tecnologia • Governança</div></div></div></section>
+
+<section class="about" id="sobre"><div class="container about-grid"><div>
+<div class="section-kicker">Sobre mim</div><h2 class="section-title">Tecnologia com visão de negócio.</h2>
+<div class="about-card"><strong>15+</strong><p>Anos de experiência profissional em Tecnologia da Informação.</p><strong>OFFSHORE</strong><p>Experiência em Óleo e Gás, FPSOs e unidades onshore.</p><strong>PMO</strong><p>Atuação em planejamento, governança, fornecedores, indicadores e portfólio.</p></div></div>
+<div class="about-text"><p>Atualmente atuo como <strong>Analista de Projetos de Infraestrutura de TI na MODEC Serviços de Petróleo e Gás</strong>, com atuação direta no setor offshore.</p><p>Minha experiência combina planejamento, execução e controle de projetos multissetoriais, gestão de fornecedores, cronogramas e orçamento, além de interface constante com clientes internos e equipes técnicas em embarcações e unidades onshore.</p><p>Minha atuação atual inclui PGPs, cronogramas, RACI, dashboards executivos e acompanhamento de projetos de rede, cloud, servidores e observabilidade.</p><p>Busco oportunidades em <strong>Gerenciamento de Projetos, PMO e Governança de TI</strong>, conectando estratégia, pessoas e execução.</p></div></div></section>
+
+<section class="numbers"><div class="container">
+<div class="section-kicker">Projetos em números</div><h2 class="section-title">Escala, complexidade e gestão.</h2>
+<div class="metric-grid">
+<div class="metric"><strong>7</strong><span>Embarcações no projeto DTH</span></div>
+<div class="metric"><strong>~500</strong><span>Cabines impactadas</span></div>
+<div class="metric"><strong>~R$ 560 mil</strong><span>Investimento DTH</span></div>
+<div class="metric"><strong>466</strong><span>VMs no inventário Datadog*</span></div>
+<div class="metric"><strong>4 TB</strong><span>Dados no escopo Nutanix*</span></div>
+</div>
+</div></section>
+
+<section class="projects" id="projetos"><div class="container">
+<div class="section-kicker">Projetos & transformação</div><h2 class="section-title">Experiência que vira resultado.</h2>
+<p class="section-intro">Cases de infraestrutura e tecnologia com métricas de escala, investimento, prazo, desafios e resultados. Nos projetos em andamento, os números representam escopo ou referência de planejamento.</p>
+
+<div class="grid two project-group">
+<article class="card project">
+<div class="tag">Concluído · Infraestrutura · Offshore</div>
+<h3>Renovação Sky TV / DTH HD</h3>
+<p>Gestão ponta a ponta da renovação do sistema de TV em embarcações, com operação normal durante a implantação.</p>
+<div class="kpis">
+<div class="kpi"><strong>7</strong><span>Embarcações</span></div>
+<div class="kpi"><strong>~500</strong><span>Cabines</span></div>
+<div class="kpi"><strong>~R$ 560k</strong><span>Investimento</span></div>
+<div class="kpi"><strong>9</strong><span>Meses</span></div>
+<div class="kpi"><strong>1</strong><span>Fornecedor</span></div>
+<div class="kpi"><strong>3</strong><span>Técnicos/embarque</span></div>
+</div>
+<ul><li>Planejamento, fornecedor, logística, embarques e acompanhamento financeiro.</li><li>Gestão de remarcações e restrições operacionais.</li><li>Entrega dentro do prazo, sem navio aguardando material.</li></ul>
+<div class="result"><strong>Resultado:</strong> melhoria da qualidade, maior satisfação dos usuários e ampliação da oferta de canais HD.</div>
+</article>
+
+<article class="card project">
+<div class="tag">Concluído · Infraestrutura · Padronização</div>
+<h3>Padronização de Racks de Telecom</h3>
+<p>Padronização do cabeamento em embarcações e escritórios para facilitar identificação e manutenção.</p>
+<div class="kpis">
+<div class="kpi"><strong>7</strong><span>Unidades</span></div>
+<div class="kpi"><strong>4</strong><span>Embarcações</span></div>
+<div class="kpi"><strong>3</strong><span>Escritórios</span></div>
+<div class="kpi"><strong>~21–35</strong><span>Racks</span></div>
+<div class="kpi"><strong>~R$ 280k</strong><span>Investimento</span></div>
+<div class="kpi"><strong>11</strong><span>Meses</span></div>
+</div>
+<ul><li>Gestão de cronograma, fornecedor, técnicos, logística, acesso e execução.</li><li>Padronização visual por cores para diferentes serviços.</li><li>Acompanhamento e pagamento do fornecedor.</li></ul>
+<div class="result"><strong>Resultado:</strong> maior autonomia das equipes locais para identificar serviços e realizar manutenção/troubleshooting.</div>
+</article>
+
+<article class="card project">
+<div class="tag">Em andamento · Cloud · Storage · Offshore</div>
+<h3>Nutanix Files</h3>
+<p>Modernização e padronização de File Services em ambiente offshore, substituindo o ambiente baseado em Windows File Server.</p>
+<div class="kpis">
+<div class="kpi"><strong>1</strong><span>Embarcação</span></div>
+<div class="kpi"><strong>4 TB</strong><span>Dados</span></div>
+<div class="kpi"><strong>~16</strong><span>Semanas previstas*</span></div>
+</div>
+<ul><li>Gestão do projeto, contratação e pagamento do fornecedor.</li><li>Controle de cronograma e reuniões de acompanhamento.</li><li>Interface entre vendor e equipes de Servers & Cloud.</li></ul>
+<span class="status">Em execução</span>
+<div class="result"><strong>KPIs de sucesso:</strong> volume migrado, prazo, incidentes, indisponibilidade, aceite técnico e orçamento.</div>
+</article>
+
+<article class="card project">
+<div class="tag">Em andamento · Observabilidade</div>
+<h3>Datadog — Fase 1</h3>
+<p>Evolução do monitoramento por PRTG para uma estratégia de observabilidade baseada em Datadog.</p>
+<div class="kpis">
+<div class="kpi"><strong>~466</strong><span>VMs*</span></div>
+<div class="kpi"><strong>3</strong><span>Dashboards*</span></div>
+<div class="kpi"><strong>≤10</strong><span>Tipos de alertas*</span></div>
+<div class="kpi"><strong>R$ 45k</strong><span>Investimento</span></div>
+<div class="kpi"><strong>110h</strong><span>Esforço estimado*</span></div>
+<div class="kpi"><strong>6–8</strong><span>Semanas previstas*</span></div>
+</div>
+<ul><li>Gestão do projeto, contratação e pagamento do fornecedor.</li><li>Controle de cronograma e reuniões com vendor.</li><li>Interface com as equipes técnicas da MODEC.</li></ul>
+<span class="status">Em execução</span>
+<div class="result"><strong>KPIs de sucesso:</strong> cobertura das VMs, dashboards entregues, alertas implantados e qualidade da coleta.</div>
+</article>
+</div>
+<p style="margin-top:18px;font-size:12px;color:#7a858d">* Escopo, inventário, prazo e esforço conforme documentação de planejamento dos projetos em andamento.</p>
+</div></section>
+
+<section id="programa" style="background:#f4f1ea"><div class="container">
+<div class="section-kicker">Program Management</div><h2 class="section-title">Infrastructure Evolution Program 2027.</h2>
+<p class="section-intro">Estruturação de um programa de evolução estratégica para Servers & Cloud, conectando operação atual, iniciativas 2027, governança, indicadores e roadmap.</p>
+
+<article class="card project program-card" style="margin-top:40px">
+<div class="tag">Program Management · Governança · Estratégia</div>
+<h3>Da operação atual à evolução estratégica de TI</h3>
+<p>Programa estruturado para elevar maturidade de infraestrutura em cinco frentes: Governança, FinOps, Segurança, Observabilidade e Cloud/Automação.</p>
+<div class="kpis">
+<div class="kpi"><strong>11</strong><span>FPSOs</span></div>
+<div class="kpi"><strong>23</strong><span>Navios/sites onshore</span></div>
+<div class="kpi"><strong>5</strong><span>Frentes estratégicas</span></div>
+<div class="kpi"><strong>3</strong><span>Projetos de refresh</span></div>
+<div class="kpi"><strong>~3</strong><span>Meses de governança</span></div>
+<div class="kpi"><strong>4–5</strong><span>Stakeholders/ritual</span></div>
+</div>
+<ul><li>Criação de visão integrada das iniciativas de evolução de Servers & Cloud.</li><li>Roadmap, RACI por iniciativa e KPIs em construção.</li><li>Governança semanal implantada para acompanhar status, riscos, impedimentos e próximos passos.</li><li>Reuniões específicas de acompanhamento para Cloud e Network.</li></ul>
+<div class="result"><strong>Transformação de gestão:</strong> criação de uma rotina estruturada de governança e evolução de portfólio onde não havia roadmap consolidado, RACI por iniciativa ou KPIs definidos para essas novas frentes.</div>
+</article>
+</div></section>
+
+<section id="experiencia"><div class="container"><div class="section-kicker">Experiência profissional</div><h2 class="section-title">Da operação à gestão de projetos.</h2>
+<div class="grid two timeline">
+<article class="card"><div class="period">Atual</div><h3>Analista de Projetos de Infraestrutura de TI · MODEC</h3><p>Planejamento, coordenação e acompanhamento de projetos de rede, cloud, servidores e observabilidade em FPSOs e unidades onshore; PGP, cronogramas, RACI, fornecedores, orçamento, riscos e dashboards executivos.</p></article>
+<article class="card"><div class="period">Experiência anterior</div><h3>Analista de Projetos de TI · SPREAD (Contratada Petrobras)</h3><p>Projetos de TI vinculados à Petrobras, com foco em infraestrutura, suporte e iniciativas de rede, em ambiente de alta criticidade operacional.</p></article>
+<article class="card"><div class="period">Experiência anterior</div><h3>Analista de TI · Fugro Brasil</h3><p>Suporte e gestão de infraestrutura de TI em ambiente corporativo e offshore, contribuindo para a continuidade operacional de projetos técnicos.</p></article>
+<article class="card"><div class="period">Evolução profissional</div><h3>Projetos · Governança · Operações</h3><p>Experiência em interface com clientes internos, equipes técnicas e fornecedores, gestão de cronogramas, orçamento, riscos, indicadores e comunicação executiva.</p></article>
+</div></div></section>
+
+<section class="competencies" id="competencias"><div class="container"><div class="section-kicker">Competências</div><h2 class="section-title">Onde tecnologia encontra gestão.</h2>
+<div class="grid four">
+<div class="card"><div class="icon">◈</div><h3>Gerenciamento de Projetos</h3><p>PGP, cronogramas, escopo, prazo, orçamento, RACI e gestão de fornecedores.</p></div>
+<div class="card"><div class="icon">◇</div><h3>Agile</h3><p>Scrum, Kanban e Jira, com aplicação de práticas ágeis em projetos e equipes.</p></div>
+<div class="card"><div class="icon">▣</div><h3>Infraestrutura</h3><p>Azure, Microsoft 365, VMware, Nutanix, redes Cisco e ambientes híbridos.</p></div>
+<div class="card"><div class="icon">◎</div><h3>Gestão & Dados</h3><p>Power BI, monday.com, Microsoft Project, Microsoft Office e ITSM.</p></div>
+</div></div></section>
+
+<section class="about" id="formacao"><div class="container"><div class="section-kicker">Formação & certificações</div><h2 class="section-title">Desenvolvimento contínuo.</h2>
+<div class="grid two">
+<div class="card"><div class="icon">◆</div><h3>Formação acadêmica</h3><p><strong>MBE em Engenharia de Produção</strong> — Uninter</p><p><strong>Pós-graduação em Projetos e Arquiteturas em Cloud Computing</strong> — Unopar</p><p><strong>Pós-graduação em Engenharia da Computação</strong> — Unopar</p><p><strong>Graduação em Sistemas de Informação</strong> — Estácio de Sá</p><p><strong>Tecnólogo em Gestão de Tecnologia da Informação</strong> — Uninter</p></div>
+<div class="card"><div class="icon">★</div><h3>Certificações</h3><p><strong>Scrum Master</strong> — Scrum Alliance</p><p><strong>PMP</strong> — Curso de preparação para a certificação</p><br><h3>Idiomas</h3><p>Português — Nativo</p><p>Inglês — Avançado</p></div>
+</div></div></section>
+
+<section class="cta"><div class="container"><div class="section-kicker">Vamos conversar?</div><h2 class="section-title">Tem um projeto ou oportunidade?</h2><p>Estou aberta a conexões profissionais e oportunidades em Gerenciamento de Projetos, PMO, governança e projetos de Tecnologia.</p>
+<div class="buttons"><a class="btn btn-primary" href="https://wa.me/5522981684561?text=Ol%C3%A1%20Daniele!%20Vi%20seu%20portf%C3%B3lio%20profissional%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA." target="_blank" rel="noopener">Falar pelo WhatsApp</a><a class="btn btn-light" href="https://www.linkedin.com/in/daniele-brito-52076a137/" target="_blank" rel="noopener">Ver LinkedIn</a></div></div></section>
+
+<section class="contact" id="contato"><div class="container"><div class="section-kicker">Contato</div><h2 class="section-title">Vamos manter contato.</h2><div class="contact-grid">
+<a class="contact-item" href="mailto:daniele.cdbrito@outlook.com">✉️ daniele.cdbrito@outlook.com</a>
+<a class="contact-item" href="https://wa.me/5522981684561?text=Ol%C3%A1%20Daniele!%20Vi%20seu%20portf%C3%B3lio%20profissional%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA." target="_blank" rel="noopener">💬 WhatsApp · 22 98168-4561</a>
+<a class="contact-item" href="https://www.linkedin.com/in/daniele-brito-52076a137/" target="_blank" rel="noopener">💼 LinkedIn</a>
+</div></div></section>
+</main>
+<footer><p>© 2026 <strong>Daniele Brito</strong> · Gerente de Projetos · PMO · Infraestrutura de TI</p><p>danielebrito.com.br</p></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+</script>
+</body>
+</html>
