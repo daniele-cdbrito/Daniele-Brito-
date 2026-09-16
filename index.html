@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daniele Brito | Project Management · PMO · IT Governance</title>
+<meta name="description" content="Portfólio profissional de Daniele Brito — Projetos de TI, PMO, Governança e Gestão de Portfólio.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{
+ --navy:#102a43; --blue:#1d5f86; --sky:#dcebf3; --gold:#b27a27;
+ --cream:#f5f2ea; --white:#fbfaf7; --text:#243b45; --muted:#66757d;
+ --line:#d8d2c7; --red:#a84c43;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--text);font-family:"DM Sans",Arial,sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
+.menu{position:fixed;left:24px;top:24px;z-index:50;width:58px;height:58px;border:1px solid var(--gold);
+background:var(--navy);color:#f1d39d;font-size:23px;cursor:pointer}
+.drawer{position:fixed;z-index:49;left:0;top:0;bottom:0;width:min(450px,89vw);padding:105px 42px 35px;
+background:var(--navy);color:#e9d5aa;transform:translateX(-105%);transition:.35s;overflow:auto;box-shadow:18px 0 50px #0003}
+.drawer.open{transform:translateX(0)}
+.drawer .label{font-size:13px;letter-spacing:.34em;color:#aebbc3;margin-bottom:25px}
+.drawer a{display:block;padding:9px 0;font:500 18px "Playfair Display",serif;letter-spacing:.01em}
+.drawer .available{border-top:1px solid #718392;margin-top:28px;padding-top:24px}
+.available strong{display:block;color:#a6d28c;letter-spacing:.15em;font-size:13px;margin-bottom:8px}
+.drawer .slogan{border-top:1px solid #718392;border-bottom:1px solid #718392;margin:28px 0;padding:24px 0;
+font:italic 20px "Playfair Display",serif;color:#d9bd8a}
+.drawer .buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px}.drawer .buttons a{text-align:center;border:1px solid #a68b5e;padding:12px;font:600 12px "DM Sans";letter-spacing:.12em}
+main{max-width:1250px;margin:auto}
+section{padding:115px 7vw}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:50px}
+.eyebrow{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:500;line-height:1.05}
+h1{font-size:clamp(62px,9vw,125px);letter-spacing:-.05em;margin:22px 0 12px}
+h1 span,h2 span{color:var(--gold);font-style:italic}
+.role{font-size:clamp(16px,2vw,23px);color:var(--gold);letter-spacing:.14em;text-transform:uppercase}
+.hero .statement{font:500 clamp(29px,4vw,53px)/1.15 "Playfair Display";margin:45px 0 24px}
+.hero .statement span{color:var(--gold);font-style:italic}
+.hero p{font-size:18px;color:#52636b;max-width:760px}
+.photo{min-height:590px;position:relative;display:flex;align-items:flex-end;justify-content:center}
+.photo-frame{width:88%;height:590px;border:1px solid var(--line);background:linear-gradient(145deg,#e6eef2,#f7f4ed);
+display:flex;align-items:center;justify-content:center;color:#7a8589;text-align:center;padding:30px}
+.real-photo{padding:0!important;overflow:hidden}.real-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}.photo-frame b{display:block;font:500 31px "Playfair Display";color:var(--navy);margin-bottom:10px}
+.photo-frame small{color:var(--muted)}
+.stats{display:flex;gap:55px;flex-wrap:wrap;margin-top:50px}
+.stat strong{display:block;font:500 48px "Playfair Display";color:var(--gold)}
+.stat span{display:block;color:var(--muted);max-width:190px;font-size:13px}
+.cream{background:var(--cream)}
+h2{font-size:clamp(46px,6.5vw,82px);margin:18px 0 30px;letter-spacing:-.025em}
+.lead{font:500 clamp(22px,3vw,30px)/1.55 "Playfair Display";max-width:950px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:55px}
+.card{border-top:2px solid var(--red);padding:27px 8px}.num{color:var(--gold);font:500 16px "Playfair Display"}
+.card h3{font-size:31px;margin:11px 0}.card p{color:#5d6b70}
+.quote{max-width:960px;margin:60px auto;font:italic clamp(34px,5vw,67px)/1.2 "Playfair Display";text-align:center}
+.quote em{color:var(--gold)}
+.timeline{margin-top:55px;border-left:1px solid var(--gold);padding-left:34px}.event{padding:0 0 40px;position:relative}
+.event:before{content:"";position:absolute;width:9px;height:9px;border:2px solid var(--gold);background:var(--white);border-radius:50%;left:-40px;top:8px}
+.event .year{color:var(--gold);font-size:12px;letter-spacing:.18em;text-transform:uppercase}.event h3{font-size:29px;margin:5px 0}
+.process{display:grid;grid-template-columns:repeat(5,1fr);margin-top:60px}
+.step{padding:22px 15px;border-top:1px solid var(--gold)}.step b{font:500 28px "Playfair Display";color:var(--gold)}.step h3{font-size:22px;margin:8px 0}.step p{font-size:13px;color:var(--muted)}
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:55px}.case{background:var(--white);border:1px solid var(--line);padding:34px}.case .tag{font-size:11px;letter-spacing:.15em;color:var(--gold);text-transform:uppercase}.case h3{font-size:35px;margin:10px 0 15px}.case p,.case li{color:#5b686d}.case ul{padding-left:20px}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}.skill{border:1px solid var(--line);padding:12px 17px;background:var(--white);font-size:13px}
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:55px;margin-top:50px}.cred{padding:18px 0;border-bottom:1px solid var(--line)}.cred b{display:block;font:500 25px "Playfair Display";color:var(--navy)}.cred span{font-size:14px;color:var(--muted)}
+.contact{background:var(--navy);color:#edf1f2;text-align:center}.contact h2{color:#edf1f2}.contact p{max-width:650px;margin:0 auto 35px;color:#c3d0d6}.links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.links a{border:1px solid #b9965c;color:#edd29f;padding:14px 25px;font-size:12px;font-weight:700;letter-spacing:.12em}
+footer{background:var(--navy);color:#8497a2;text-align:center;padding:25px;font-size:11px}
+.note{margin-top:45px;padding:18px;border-left:3px solid var(--gold);background:#fff9ed;color:#59666b;font-size:13px}
+@media(max-width:850px){section{padding:85px 7vw}.hero{grid-template-columns:1fr}.photo{min-height:420px}.photo-frame{height:420px}.grid,.cases,.creds{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.stats{gap:25px}}
+@media(max-width:480px){.process{grid-template-columns:1fr}.drawer{padding-left:28px;padding-right:28px}}
+</style>
+</head>
+<body>
+<button class="menu" onclick="document.querySelector('.drawer').classList.toggle('open')" aria-label="Menu">☰</button>
+<nav class="drawer">
+<div class="label">PORTFÓLIO · DANIELE BRITO</div>
+<a href="#inicio">01 &nbsp; ABERTURA</a><a href="#resolve">02 &nbsp; O QUE EU RESOLVO</a>
+<a href="#trajetoria">03 &nbsp; MINHA TRAJETÓRIA</a><a href="#trabalho">04 &nbsp; COMO EU TRABALHO</a>
+<a href="#metodo">05 &nbsp; MÉTODO & REPERTÓRIO</a><a href="#acompanha">06 &nbsp; GOVERNANÇA & KPIs</a>
+<a href="#cases">07 &nbsp; CASES</a><a href="#credenciais">08 &nbsp; CREDENCIAIS</a><a href="#contato">09 &nbsp; CONTATO</a>
+<div class="available"><strong>● DISPONÍVEL</strong>Projetos de TI · PMO · Governança · Gestão de Portfólio</div>
+<div class="slogan">Complexidade fica comigo.<br>Clareza fica com você.</div>
+<div class="buttons"><a href="#inicio">TOPO</a><a href="#contato">CONTATO</a></div>
+</nav>
+
+<main>
+<section class="hero" id="inicio">
+<div>
+<div class="eyebrow">PORTFÓLIO PROFISSIONAL</div>
+<h1>Daniele <span>Brito</span></h1>
+<div class="role">Project Management · PMO · IT Governance</div>
+<div class="statement">Transformo complexidade em clareza, estratégia em <span>execução.</span></div>
+<p>Profissional de Tecnologia com experiência em projetos, governança e operações de TI, incluindo ambiente offshore e iniciativas de infraestrutura, cloud, conectividade e observabilidade.</p>
+<div class="stats">
+<div class="stat"><strong>6+</strong><span>anos de trajetória em Tecnologia no setor de Óleo &amp; Gás</span></div>
+<div class="stat"><strong>7</strong><span>unidades offshore envolvidas em projeto de renovação DTH</span></div>
+<div class="stat"><strong>PMO</strong><span>foco atual de posicionamento profissional</span></div>
+</div>
+</div>
+<div class="photo"><div class="photo-frame real-photo"><img src="foto-daniele.jpeg" alt="Daniele Brito — Project Management, PMO e IT Governance"></div></div>
+</section>
+
+<section class="cream" id="resolve">
+<div class="eyebrow">O QUE EU RESOLVO</div><h2>Projetos precisam de <span>clareza.</span></h2>
+<p class="lead">Meu papel é conectar pessoas, processos, tecnologia e liderança para que o projeto tenha direção, acompanhamento e visibilidade.</p>
+<div class="grid">
+<article class="card"><div class="num">01</div><h3>Visibilidade</h3><p>Organização de portfólio, status, marcos, riscos, dependências e indicadores para uma visão executiva.</p></article>
+<article class="card"><div class="num">02</div><h3>Governança</h3><p>Padronização de processos e artefatos, definição de responsabilidades e ritos de acompanhamento.</p></article>
+<article class="card"><div class="num">03</div><h3>Execução</h3><p>Acompanhamento de cronogramas, entregas, stakeholders e ações corretivas para manter o projeto avançando.</p></article>
+</div>
+</section>
+
+<section id="trajetoria">
+<div class="eyebrow">MINHA TRAJETÓRIA</div><h2>Da operação para a <span>gestão de projetos.</span></h2>
+<p class="lead">Minha experiência foi construída dentro de Tecnologia, passando por suporte e operações, infraestrutura e cloud e chegando à atuação dedicada a projetos e governança.</p>
+<div class="timeline">
+<div class="event"><div class="year">Experiência</div><h3>Operações &amp; Suporte de TI</h3><p>Vivência prática em ambientes críticos e atendimento às necessidades do negócio.</p></div>
+<div class="event"><div class="year">Infraestrutura</div><h3>Cloud, servidores &amp; offshore</h3><p>Atuação em ambientes de infraestrutura e operações de TI em unidades offshore.</p></div>
+<div class="event"><div class="year">Projetos</div><h3>Planejamento, execução &amp; governança</h3><p>Gestão de iniciativas, cronogramas, riscos, stakeholders, logística e entregas.</p></div>
+<div class="event"><div class="year">Próximo capítulo</div><h3>Project Management · PMO · Portfolio</h3><p>Posicionamento profissional direcionado à gestão de projetos, PMO e gestão de portfólio.</p></div>
+</div>
+</section>
+
+<section class="cream" id="trabalho">
+<div class="eyebrow">COMO EU TRABALHO</div><h2>Do caos operacional para uma <span>visão executiva.</span></h2>
+<div class="process">
+<div class="step"><b>01</b><h3>Contexto</h3><p>Entender objetivo, cenário e restrições.</p></div>
+<div class="step"><b>02</b><h3>Planejamento</h3><p>Escopo, marcos, responsáveis e dependências.</p></div>
+<div class="step"><b>03</b><h3>Governança</h3><p>Ritos, artefatos, riscos e tomada de decisão.</p></div>
+<div class="step"><b>04</b><h3>Controle</h3><p>Prazo, entregas, orçamento e indicadores.</p></div>
+<div class="step"><b>05</b><h3>Comunicação</h3><p>Informação objetiva para cada stakeholder.</p></div>
+</div>
+</section>
+
+<section id="metodo">
+<div class="eyebrow">MÉTODO & REPERTÓRIO</div><h2>Gestão com método. <span>Execução com contexto.</span></h2>
+<p class="lead">Experiência com abordagens Waterfall, Agile e Hybrid e práticas de PMO, gestão de riscos, stakeholders, cronogramas, KPIs e governança.</p>
+<div class="skills">
+<span class="skill">Project Management</span><span class="skill">PMO</span><span class="skill">Portfolio Management</span><span class="skill">IT Governance</span><span class="skill">Risk Management</span><span class="skill">Stakeholder Management</span><span class="skill">Executive Reporting</span><span class="skill">Infrastructure</span><span class="skill">Cloud</span><span class="skill">Offshore IT</span><span class="skill">Monday</span><span class="skill">Jira</span><span class="skill">ServiceNow</span>
+</div>
+</section>
+
+<section class="cream" id="acompanha">
+<div class="eyebrow">GOVERNANÇA & KPIs</div><h2>Informação certa, no <span>momento certo.</span></h2>
+<p class="lead">Acompanhamento baseado em dados, exceções e decisões: o que avançou, o que desviou, o que precisa de ação e qual é o próximo marco.</p>
+<div class="grid">
+<article class="card"><h3>Dashboard executivo</h3><p>Visão consolidada de projetos, status, marcos, riscos, dependências e prioridades.</p></article>
+<article class="card"><h3>Riscos &amp; Issues</h3><p>Identificação, análise, responsáveis, ações de mitigação e acompanhamento dos desvios.</p></article>
+<article class="card"><h3>CAPEX &amp; OPEX</h3><p>Monitoramento financeiro de iniciativas e apoio à tomada de decisão do portfólio.</p></article>
+</div>
+<div class="note">Artefatos que fazem parte do meu repertório: roadmap, RACI, matriz de stakeholders, heatmap de riscos, cronograma de marcos, status report e KPIs.</div>
+</section>
+
+<section>
+<div class="eyebrow">O COMPROMISSO</div><h2>Eu não escondo a <span>complexidade.</span></h2>
+<div class="quote">“Risco sem visibilidade vira surpresa. <em>Governança transforma informação em decisão.</em>”</div>
+<p class="lead">Meu compromisso é criar uma gestão que permita enxergar o cenário, antecipar problemas, organizar prioridades e comunicar com objetividade.</p>
+</section>
+
+<section class="cream" id="cases">
+<div class="eyebrow">CASES SELECIONADOS</div><h2>Experiência que <span>comprova.</span></h2>
+<div class="cases">
+<article class="case"><div class="tag">Offshore · 7 unidades · 9 meses</div><h3>Renovação DTH / TV</h3><p>Projeto de renovação do sistema de TV/DTH por cabine em unidades offshore, envolvendo planejamento, logística de pessoas e materiais e acompanhamento das entregas.</p><ul><li>Planejamento e cronograma</li><li>Stakeholders técnicos e operacionais</li><li>Logística e acompanhamento de execução</li></ul></article>
+<article class="case"><div class="tag">Infraestrutura · Portfólio</div><h3>Cloud &amp; Servers</h3><p>Estruturação de iniciativas de infraestrutura e servidores com visão consolidada para acompanhamento e governança.</p><ul><li>Roadmap de iniciativas</li><li>Riscos e dependências</li><li>KPIs e visão executiva</li></ul></article>
+<article class="case"><div class="tag">Conectividade · Offshore</div><h3>SD-WAN &amp; Wi-Fi</h3><p>Atuação em iniciativas de evolução da conectividade e infraestrutura de rede em ambiente offshore.</p><ul><li>Integração entre equipes</li><li>Planejamento e acompanhamento</li><li>Gestão de entregas</li></ul></article>
+<article class="case"><div class="tag">Observabilidade · TI</div><h3>Datadog</h3><p>Iniciativa de observabilidade para ampliar a visibilidade dos ambientes e apoiar decisões baseadas em indicadores.</p><ul><li>Monitoramento</li><li>Indicadores</li><li>Visibilidade operacional</li></ul></article>
+<article class="case"><div class="tag">Resiliência · Infraestrutura</div><h3>Backup &amp; Disaster Recovery</h3><p>Iniciativas relacionadas à proteção de dados, continuidade e recuperação de ambientes críticos.</p><ul><li>Planejamento</li><li>Dependências técnicas</li><li>Governança e acompanhamento</li></ul></article>
+<article class="case"><div class="tag">Governança · PMO</div><h3>Roadmap &amp; Portfólio</h3><p>Organização de iniciativas de TI em uma visão integrada, com priorização, acompanhamento e comunicação executiva.</p><ul><li>Roadmap</li><li>Dashboard consolidado</li><li>RACI e stakeholders</li></ul></article>
+</div>
+</section>
+
+<section id="credenciais">
+<div class="eyebrow">CREDENCIAIS</div><h2>Base técnica + <span>gestão.</span></h2>
+<div class="creds">
+<div>
+<div class="cred"><b>Sistemas de Informação</b><span>Formação superior</span></div>
+<div class="cred"><b>MBA em Engenharia de Produção</b><span>Gestão, processos e melhoria contínua</span></div>
+<div class="cred"><b>Scrum Master</b><span>Agilidade, colaboração e facilitação</span></div>
+</div>
+<div>
+<div class="cred"><b>PMP</b><span>Elegibilidade aprovada · preparação para certificação</span></div>
+<div class="cred"><b>Project Management Foundations</b><span>Waterfall · Agile · Hybrid</span></div>
+<div class="cred"><b>IT Operations</b><span>Infraestrutura · Cloud · Offshore</span></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contato">
+<div class="eyebrow">CONTATO</div><h2>Vamos conversar sobre o <span>próximo projeto?</span></h2>
+<p>Aberta a oportunidades em Project Management, PMO, Governança e Gestão de Portfólio de TI.</p>
+<div class="links"><a href="mailto:daniele.cdbrito@outlook.com">E-MAIL</a><a href="tel:+5522981684561">TELEFONE</a><a href="https://www.linkedin.com/in/daniele-brito-52076a137/" target="_blank">LINKEDIN</a></div>
+</section>
+</main>
+<footer>© 2026 Daniele Brito · Project Management · PMO · IT Governance</footer>
+<script>document.querySelectorAll('.drawer a').forEach(x=>x.onclick=()=>document.querySelector('.drawer').classList.remove('open'));</script>
+</body></html>
